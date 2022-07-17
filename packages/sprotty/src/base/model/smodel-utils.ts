@@ -128,7 +128,7 @@ export function translatePoint(point: Point, source: SModelElement, target: SMod
                 return point;
         }
         // Translate from the root to the target element
-        const targetTrace = [];
+        const targetTrace: SChildElement[]  = [];
         while (target instanceof SChildElement) {
             targetTrace.push(target);
             target = target.parent;
